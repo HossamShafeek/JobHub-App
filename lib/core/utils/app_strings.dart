@@ -37,6 +37,9 @@ class AppStrings {
   static const String firstEmptySearchMessage = 'Search not found!';
   static const String secondEmptySearchMessage =
       'Try searching with different keywords so we can show you.';
+  static const String firstEmptyChatMessage = 'You have not received any messages!';
+  static const String secondEmptyChatMessage =
+      'Once your application has reached the interview stage, you will get a message from the recruiter.';
   static const String applyNow = 'Apply Now';
   static const String applyJob = 'Apply Job';
   static const String firstEmptyAppliedMessage =

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jobhub/config/routes/app_routes.dart';
 import 'package:jobhub/core/utils/app_strings.dart';
 import 'package:jobhub/core/utils/app_styles.dart';
 import 'package:jobhub/core/widgets/custom_error_widget.dart';
@@ -30,7 +31,9 @@ class SuggestedJobWidget extends StatelessWidget {
                   ),
                   CustomTextButton(
                     title: AppStrings.viewAll,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.jobsView);
+                    },
                   ),
                 ],
               ),

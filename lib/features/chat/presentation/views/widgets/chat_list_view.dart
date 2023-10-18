@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jobhub/core/utils/app_assets.dart';
 import 'package:jobhub/core/utils/app_constants.dart';
+import 'package:jobhub/core/utils/app_strings.dart';
+import 'package:jobhub/core/widgets/custom_empty_widget.dart';
 import 'package:jobhub/features/chat/data/models/chat_model/chat_model.dart';
 import 'package:jobhub/features/chat/presentation/cubits/get_chat_cubit/get_chat_cubit.dart';
 import 'package:jobhub/features/chat/presentation/cubits/get_chat_cubit/get_chat_state.dart';
@@ -17,7 +20,9 @@ class _ChatListViewState extends State<ChatListView> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      GetChatCubit.get(context).jumpToEnd();
+      if (GetChatCubit.get(context).chatModel!.data!.isNotEmpty) {
+        GetChatCubit.get(context).jumpToEnd();
+      }
     });
     super.initState();
   }
@@ -45,7 +50,11 @@ class _ChatListViewState extends State<ChatListView> {
             itemCount: chatModel.data!.length,
           );
         } else {
-          return const Text('No Messages');
+          return CustomEmptyWidget(
+            imagePath: AppAssets.chat,
+            firstMessage: AppStrings.firstEmptyChatMessage,
+            secondMessage: AppStrings.secondEmptyChatMessage,
+          );
         }
       },
     );
