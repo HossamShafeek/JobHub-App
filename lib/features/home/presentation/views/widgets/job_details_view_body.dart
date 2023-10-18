@@ -29,10 +29,9 @@ class JobDetailsViewBody extends StatelessWidget {
           ),
           GradientButton(
             onPressed: () {
-              Navigator.pushNamed(context, Routes.applyJob,arguments: job);
+              Navigator.pushNamed(context, Routes.applyJob, arguments: job);
             },
-            title:
-            Text(
+            title: Text(
               AppStrings.applyNow,
               style: AppStyles.textStyle18.copyWith(
                 color: AppColors.white,

@@ -23,9 +23,9 @@ class PortfolioStep extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            ApplyJobCubit.get(context).pickedFile==null
+            ApplyJobCubit.get(context).pickedFile == null
                 ? const UploadCvContainer()
-                :  UploadedCvWidget(),
+                : UploadedCvWidget(),
           ],
         );
       },

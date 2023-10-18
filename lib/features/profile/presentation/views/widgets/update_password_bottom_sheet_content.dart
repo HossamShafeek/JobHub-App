@@ -79,7 +79,7 @@ class UpdatePasswordBottomSheetContent extends StatelessWidget {
                     hintText: 'Enter your password',
                   ),
                   GradientButton(
-                    title:  Text(
+                    title: Text(
                       AppStrings.update,
                       style: AppStyles.textStyle18.copyWith(
                         color: AppColors.white,

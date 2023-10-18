@@ -64,8 +64,7 @@ class ProfileViewBody extends StatelessWidget {
                 Navigator.pushReplacementNamed(context, Routes.loginView);
               });
             },
-            title:
-            Text(
+            title: Text(
               AppStrings.logout,
               style: AppStyles.textStyle18.copyWith(
                 color: AppColors.white,

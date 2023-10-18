@@ -33,7 +33,9 @@ class NextButton extends StatelessWidget {
             }
           },
           title: Text(
-            OnBoardingCubit.get(context).isLast?AppStrings.getStarted: AppStrings.next,
+            OnBoardingCubit.get(context).isLast
+                ? AppStrings.getStarted
+                : AppStrings.next,
             style: AppStyles.textStyle18.copyWith(
               color: AppColors.white,
             ),

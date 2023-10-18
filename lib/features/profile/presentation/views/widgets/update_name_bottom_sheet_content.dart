@@ -66,8 +66,7 @@ class UpdateNameBottomSheetContent extends StatelessWidget {
                     hintText: 'Enter your name',
                   ),
                   GradientButton(
-                    title:
-                    Text(
+                    title: Text(
                       AppStrings.update,
                       style: AppStyles.textStyle18.copyWith(
                         color: AppColors.white,

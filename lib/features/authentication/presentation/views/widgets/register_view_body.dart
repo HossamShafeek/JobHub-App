@@ -29,11 +29,11 @@ class RegisterViewBody extends StatelessWidget {
           );
           CacheHelper.setString(
             key: 'userId',
-            value: state.authenticationModel.user!.id.toString(),
+            value: state.authenticationModel.data!.id.toString(),
           );
-          AppConstants.userId = state.authenticationModel.user!.id.toString();
+          AppConstants.userId = state.authenticationModel.data!.id.toString();
           AppConstants.token = state.authenticationModel.token!;
-          Navigator.pushReplacementNamed(context, Routes.layoutView);
+          Navigator.pushNamedAndRemoveUntil(context, Routes.layoutView, (route) => false);
           showSuccessSnackBar(context: context, message: "success");
         } else if (state is RegisterFailureState) {
           showErrorSnackBar(context: context, message: state.error);

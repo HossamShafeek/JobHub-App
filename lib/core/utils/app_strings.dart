@@ -39,9 +39,8 @@ class AppStrings {
       'Try searching with different keywords so we can show you.';
   static const String applyNow = 'Apply Now';
   static const String applyJob = 'Apply Job';
-  static const String firstEmptyAppliedMessage = 'Nothing has been Applied yet!';
-  static const String secondEmptyAppliedMessage =
-      'Try applying for a job.';
-  static const String uploadPortfolio =
-      'Upload Portfolio';
+  static const String firstEmptyAppliedMessage =
+      'Nothing has been Applied yet!';
+  static const String secondEmptyAppliedMessage = 'Try applying for a job.';
+  static const String uploadPortfolio = 'Upload Portfolio';
 }

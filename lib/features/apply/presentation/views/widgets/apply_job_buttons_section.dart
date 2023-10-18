@@ -24,9 +24,13 @@ class ApplyJobButtonsSection extends StatelessWidget {
     return BlocConsumer<ApplyJobCubit, ApplyJobState>(
       listener: (context, state) {
         if (state is ApplyJobSuccessState) {
-           showSuccessSnackBar(context: context, message: 'Applied Successfully');
-          SendMessageCubit.get(context).sendMessageFromCompany(userId: AppConstants.userId).then((value){
-           Navigator.pushNamedAndRemoveUntil(context, Routes.layoutView, (route) => false);
+          showSuccessSnackBar(
+              context: context, message: 'Applied Successfully');
+          SendMessageCubit.get(context)
+              .sendMessageFromCompany(userId: AppConstants.userId)
+              .then((value) {
+            Navigator.pushNamedAndRemoveUntil(
+                context, Routes.layoutView, (route) => false);
           });
         } else if (state is ApplyJobFailureState) {
           return showErrorSnackBar(
@@ -89,7 +93,8 @@ class ApplyJobButtonsSection extends StatelessWidget {
                     } else if (ApplyJobCubit.get(context).currentStep == 1 &&
                         ApplyJobCubit.get(context).pickedFile != null) {
                       ApplyJobCubit.get(context).applyNow(
-                          jobTimeType: job.jobTimeType!, jobId: job.id.toString());
+                          jobTimeType: job.jobTimeType!,
+                          jobId: job.id.toString());
                     }
                   },
                 ),

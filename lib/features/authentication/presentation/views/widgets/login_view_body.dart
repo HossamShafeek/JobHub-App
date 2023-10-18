@@ -65,12 +65,12 @@ class LoginViewBody extends StatelessWidget {
                         LoginCubit.get(context).userLogin();
                       }
                     },
-                    title:  Text(
+                    title: Text(
                       AppStrings.signIn,
-                    style: AppStyles.textStyle18.copyWith(
-                      color: AppColors.white,
+                      style: AppStyles.textStyle18.copyWith(
+                        color: AppColors.white,
+                      ),
                     ),
-                  ),
                   ),
                   NavigateToLoginOrRegister(
                     textTitle: AppStrings.alreadyHaveAnAccount,

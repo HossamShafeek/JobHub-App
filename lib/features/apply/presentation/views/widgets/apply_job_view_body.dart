@@ -23,13 +23,15 @@ class ApplyJobViewBody extends StatelessWidget {
             children: [
               (state is ApplyJobLoadingState)
                   ? Padding(
-                    padding:  EdgeInsets.only(bottom:AppConstants.padding2h),
-                    child: const LinearProgressIndicator(),
-                  )
+                      padding: EdgeInsets.only(bottom: AppConstants.padding2h),
+                      child: const LinearProgressIndicator(),
+                    )
                   : const SizedBox(),
               JobDetailsWidget(job: job),
               const CustomStepperWidget(),
-               ApplyJobButtonsSection(job: job,),
+              ApplyJobButtonsSection(
+                job: job,
+              ),
             ],
           ),
         );

@@ -4,6 +4,7 @@ import 'package:jobhub/core/api/api_services.dart';
 import 'package:jobhub/core/api/end_points.dart';
 import 'package:jobhub/core/errors/failures.dart';
 import 'package:jobhub/features/authentication/data/models/authentication_model/authentication_model.dart';
+import 'package:jobhub/features/authentication/data/models/register_model/register_model.dart';
 import 'package:jobhub/features/authentication/data/repository/authentication_repository.dart';
 
 class AuthenticationRepositoryImplementation extends AuthenticationRepository {
@@ -12,7 +13,7 @@ class AuthenticationRepositoryImplementation extends AuthenticationRepository {
   AuthenticationRepositoryImplementation(this.apiServices);
 
   @override
-  Future<Either<Failure, AuthenticationModel>> userRegister({
+  Future<Either<Failure, RegisterModel>> userRegister({
     required String name,
     required String email,
     required String password,
@@ -25,7 +26,7 @@ class AuthenticationRepositoryImplementation extends AuthenticationRepository {
         'password': password,
       });
 
-      return Right(AuthenticationModel.fromJson(data.data));
+      return Right(RegisterModel.fromJson(data.data));
     } catch (error) {
       if (error is DioError) {
         return Left(ServerFailure(error.response!.data['massage'].toString()));

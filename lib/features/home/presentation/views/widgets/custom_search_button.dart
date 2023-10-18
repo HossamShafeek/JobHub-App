@@ -14,48 +14,53 @@ class CustomSearchButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<GetRecentlyJobsCubit,GetRecentlyJobsState>(builder: (context, state) {
-      if(state is GetRecentlyJobsSuccessState){
-        return Container(
-          padding: EdgeInsets.all(AppConstants.padding5h),
-          margin: EdgeInsets.only(top: AppConstants.padding15h),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(AppConstants.radius8r),
-            color: AppColors.grey50,
-          ),
-          width: MediaQuery.of(context).size.width,
-          child: InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, Routes.jobsView);
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  AppStrings.search,
-                  style: AppStyles.textStyle16.copyWith(
-                    color: AppColors.grey,
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(AppConstants.padding5h),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(AppConstants.radius5r),
-                    color: Colors.white,
-                  ),
-                  child: Icon(
-                    IconBroken.Search,
-                    color: AppColors.primary,
-                    size: AppConstants.iconSize24,
-                  ),
-                ),
-              ],
+    return BlocBuilder<GetRecentlyJobsCubit, GetRecentlyJobsState>(
+      builder: (context, state) {
+        if (state is GetRecentlyJobsSuccessState) {
+          return Container(
+            padding: EdgeInsets.all(AppConstants.padding5h),
+            margin: EdgeInsets.only(top: AppConstants.padding15h),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(AppConstants.radius8r),
+              color: AppColors.grey50,
             ),
-          ),
-        );
-      }else{
-        return SizedBox(height: AppConstants.padding30h,);
-      }
-    },);
+            width: MediaQuery.of(context).size.width,
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, Routes.jobsView);
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    AppStrings.search,
+                    style: AppStyles.textStyle16.copyWith(
+                      color: AppColors.grey,
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(AppConstants.padding5h),
+                    decoration: BoxDecoration(
+                      borderRadius:
+                          BorderRadius.circular(AppConstants.radius5r),
+                      color: Colors.white,
+                    ),
+                    child: Icon(
+                      IconBroken.Search,
+                      color: AppColors.primary,
+                      size: AppConstants.iconSize24,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        } else {
+          return SizedBox(
+            height: AppConstants.padding30h,
+          );
+        }
+      },
+    );
   }
 }
