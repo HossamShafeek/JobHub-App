@@ -9,8 +9,8 @@ class ApiServicesImplementation implements ApiServices {
     BaseOptions baseOptions = BaseOptions(
       baseUrl: EndPoints.baseUrl,
       receiveDataWhenStatusError: true,
-      connectTimeout: const Duration(seconds: 10),
-      receiveTimeout: const Duration(seconds: 10),
+      connectTimeout: const Duration(seconds: 15),
+      receiveTimeout: const Duration(seconds: 15),
     );
     _dio = Dio(baseOptions);
   }

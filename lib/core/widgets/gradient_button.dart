@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jobhub/core/utils/app_colors.dart';
+import 'package:jobhub/core/utils/app_styles.dart';
 
 class GradientButton extends StatelessWidget {
   const GradientButton({
@@ -18,16 +19,19 @@ class GradientButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAlias,
-      width: MediaQuery.of(context).size.width,
+      width: double.infinity,
       height: 45.h,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(radius ?? 8.w),
+          borderRadius: BorderRadius.circular(radius ?? 8.r),
           gradient: const LinearGradient(
             colors: AppColors.blueGradient,
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
           )),
-      child: MaterialButton(
+      child: TextButton(
+        style: ButtonStyle(
+          padding: MaterialStateProperty.all(EdgeInsets.zero),
+        ),
         onPressed: onPressed,
         child: title,
       ),

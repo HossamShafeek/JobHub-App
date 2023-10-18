@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:jobhub/core/utils/app_colors.dart';
 import 'package:jobhub/core/utils/app_constants.dart';
 
-
 class CustomContainerButton extends StatelessWidget {
   const CustomContainerButton(
       {Key? key,
@@ -35,7 +34,7 @@ class CustomContainerButton extends StatelessWidget {
           decoration: BoxDecoration(
             color: backgroundColor ?? AppColors.white,
             borderRadius:
-                BorderRadius.circular(radius ?? AppConstants.radius5sp),
+                BorderRadius.circular(radius ?? AppConstants.radius5r),
           ),
           child: Icon(
             icon,

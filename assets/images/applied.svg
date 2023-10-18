@@ -1,0 +1,11 @@
+<svg id="Data_Ilustration" data-name="Data Ilustration" xmlns="http://www.w3.org/2000/svg" width="173" height="142" viewBox="0 0 173 142">
+  <circle id="Ellipse_259" data-name="Ellipse 259" cx="66" cy="66" r="66" transform="translate(23 10)" fill="#f0f5ff"/>
+  <circle id="Ellipse_260" data-name="Ellipse 260" cx="50" cy="50" r="50" transform="translate(39 26)" fill="#e0ebff"/>
+  <path id="Path_27541" data-name="Path 27541" d="M94,88.275a1.854,1.854,0,0,1-1.325-.55l-9.9-9.9a1.874,1.874,0,0,1,2.65-2.65l9.9,9.9a1.886,1.886,0,0,1,0,2.65A1.964,1.964,0,0,1,94,88.275Z" fill="#2196f3"/>
+  <path id="Path_27542" data-name="Path 27542" d="M84,88.375a1.854,1.854,0,0,1-1.325-.55,1.886,1.886,0,0,1,0-2.65l9.9-9.9a1.874,1.874,0,0,1,2.65,2.65l-9.9,9.9A1.854,1.854,0,0,1,84,88.375Z" fill="#091a7a"/>
+  <path id="Path_27543" data-name="Path 27543" d="M94,62.875H84c-2.4,0-6.875,0-6.875-6.875S81.6,49.125,84,49.125H94c2.4,0,6.875,0,6.875,6.875C100.875,58.4,100.875,62.875,94,62.875Zm-10-10c-2.475,0-3.125,0-3.125,3.125s.65,3.125,3.125,3.125H94c3.125,0,3.125-.65,3.125-3.125,0-3.125-.65-3.125-3.125-3.125Z" fill="#2196f3"/>
+  <path id="Path_27544" data-name="Path 27544" d="M96.5,102.875h-15c-14.05,0-16.875-6.45-16.875-16.875V71c0-11.4,4.125-16.275,14.275-16.8a1.865,1.865,0,1,1,.2,3.725C72,58.325,68.375,60.45,68.375,71V86c0,9.25,1.825,13.125,13.125,13.125h15c11.3,0,13.125-3.875,13.125-13.125V71c0-10.55-3.625-12.675-10.725-13.075a1.878,1.878,0,1,1,.2-3.75c10.15.55,14.275,5.425,14.275,16.8v15C113.375,96.425,110.55,102.875,96.5,102.875Z" fill="#292d32"/>
+  <circle id="Ellipse_261" data-name="Ellipse 261" cx="9" cy="9" r="9" transform="translate(155 105)" fill="#d6e4ff"/>
+  <circle id="Ellipse_262" data-name="Ellipse 262" cx="7" cy="7" r="7" transform="translate(0 63)" fill="#d6e4ff"/>
+  <circle id="Ellipse_263" data-name="Ellipse 263" cx="5" cy="5" r="5" transform="translate(136)" fill="#d6e4ff"/>
+</svg>

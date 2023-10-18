@@ -8,20 +8,27 @@ class CustomNetworkImage extends StatelessWidget {
   final double? borderRadius;
   final String image;
   final Color? backgroundColor;
+  final double? height;
+  final double? width;
 
   const CustomNetworkImage(
-      {Key? key, this.borderRadius, required this.image, this.backgroundColor})
+      {Key? key,
+      this.borderRadius,
+      required this.image,
+      this.backgroundColor,
+      this.height,
+      this.width})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: double.infinity,
+      width: width ?? double.infinity,
+      height: height ?? double.infinity,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius:
-            BorderRadius.circular(borderRadius ?? AppConstants.radius10sp),
+            BorderRadius.circular(borderRadius ?? AppConstants.radius8r),
         color: backgroundColor ?? AppColors.white,
       ),
       child: CachedNetworkImage(

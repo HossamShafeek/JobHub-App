@@ -3,7 +3,6 @@ import 'package:jobhub/core/utils/app_colors.dart';
 import 'package:jobhub/core/utils/app_constants.dart';
 import 'package:jobhub/core/utils/app_styles.dart';
 
-
 class CustomDropdown extends StatelessWidget {
   const CustomDropdown({
     Key? key,
@@ -54,7 +53,7 @@ class CustomDropdown extends StatelessWidget {
               focusedBorder: AppConstants.enabledBorder,
             ),
             isExpanded: true,
-            borderRadius: BorderRadius.circular(AppConstants.radius8sp),
+            borderRadius: BorderRadius.circular(AppConstants.radius8r),
             hint: Text(
               hintText,
               style: AppStyles.textStyle14,

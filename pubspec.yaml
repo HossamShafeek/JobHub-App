@@ -56,6 +56,8 @@ dependencies:
   cached_network_image: ^3.2.3
   flutter_svg: ^2.0.7
   equatable: ^2.0.5
+  file_picker: ^6.0.0
+  cupertino_stepper: ^0.2.1
 
 dev_dependencies:
   flutter_test:

@@ -5,12 +5,11 @@ import 'package:jobhub/core/utils/app_colors.dart';
 abstract class AppStyles {
   static final textStyle12 = TextStyle(
     fontSize: 10.sp,
-    color: AppColors.white,
+    color: AppColors.grey,
   );
   static final textStyle13 = TextStyle(
     fontSize: 11.sp,
     color: AppColors.grey,
-    decoration: TextDecoration.lineThrough,
   );
   static final textStyle14 = TextStyle(
     fontSize: 12.sp,
@@ -18,11 +17,10 @@ abstract class AppStyles {
   );
   static final textStyle15 = TextStyle(
     fontSize: 13.sp,
-    color: AppColors.white,
+    color: AppColors.grey,
   );
   static final textStyle22 = TextStyle(
     fontSize: 20.sp,
-    color: AppColors.white,
     fontWeight: FontWeight.bold,
   );
 
@@ -41,7 +39,7 @@ abstract class AppStyles {
 
   static final textStyle25 = TextStyle(
     fontSize: 23.sp,
-    color: AppColors.primary,
+    color: AppColors.black,
   );
 
   static final textStyle30 = TextStyle(

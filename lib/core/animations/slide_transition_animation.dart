@@ -38,7 +38,7 @@ class _SlideTransitionAnimationState extends State<SlideTransitionAnimation>
     ).animate(
       CurvedAnimation(
         parent: _controller,
-        curve: widget.curve ?? Curves.elasticIn,
+        curve: widget.curve ?? Curves.easeIn,
       ),
     );
     _controller.forward();
