@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jobhub/config/routes/app_routes.dart';
+import 'package:jobhub/core/shimmer/shimmer_suggested_job.dart';
 import 'package:jobhub/core/utils/app_strings.dart';
 import 'package:jobhub/core/utils/app_styles.dart';
 import 'package:jobhub/core/widgets/custom_error_widget.dart';
@@ -43,9 +44,11 @@ class SuggestedJobWidget extends StatelessWidget {
         } else if (state is GetSuggestedJobFailureState) {
           return CustomErrorWidget(error: state.error);
         } else {
-          return const SizedBox();
+          return const ShimmerSuggestedJob();
         }
       },
     );
   }
 }
+
+

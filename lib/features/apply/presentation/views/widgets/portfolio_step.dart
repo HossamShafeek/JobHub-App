@@ -25,7 +25,7 @@ class PortfolioStep extends StatelessWidget {
             ),
             ApplyJobCubit.get(context).pickedFile == null
                 ? const UploadCvContainer()
-                : UploadedCvWidget(),
+                : const UploadedCvWidget(),
           ],
         );
       },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jobhub/core/shimmer/shimmer_welcome_message.dart';
 import 'package:jobhub/core/utils/app_strings.dart';
 import 'package:jobhub/core/utils/app_styles.dart';
 import 'package:jobhub/core/widgets/custom_error_widget.dart';
@@ -30,7 +31,7 @@ class WelcomeMessageWidget extends StatelessWidget {
         } else if (state is GetUserProfileFailureState) {
           return CustomErrorWidget(error: state.error);
         } else {
-          return const SizedBox();
+          return const ShimmerWelcomeMessage();
         }
       },
     );

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jobhub/core/shimmer/shimmer_saved_list_view.dart';
 import 'package:jobhub/core/utils/app_assets.dart';
 import 'package:jobhub/core/utils/app_constants.dart';
 import 'package:jobhub/core/utils/app_strings.dart';
 import 'package:jobhub/core/widgets/custom_empty_widget.dart';
-import 'package:jobhub/core/widgets/loading_indicator_widget.dart';
 import 'package:jobhub/features/Saved/presentation/cubits/get_saved_cubit/get_saved_cubit.dart';
 import 'package:jobhub/features/Saved/presentation/cubits/get_saved_cubit/get_saved_state.dart';
 import 'package:jobhub/features/Saved/presentation/view/widgets/saved_list_view_item.dart';
@@ -38,7 +38,7 @@ class SavedView extends StatelessWidget {
             secondMessage: AppStrings.secondEmptySavedMessage,
           );
         } else {
-          return const LoadingIndicatorWidget();
+          return const ShimmerSavedLisView();
         }
       },
     );

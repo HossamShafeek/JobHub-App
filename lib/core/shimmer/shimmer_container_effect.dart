@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobhub/core/utils/app_colors.dart';
+import 'package:jobhub/core/utils/app_constants.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ShimmerContainerEffect extends StatelessWidget {
@@ -28,10 +29,10 @@ class ShimmerContainerEffect extends StatelessWidget {
       child: Container(
         margin: margin,
         width: width,
-        height: height,
+        height: height??AppConstants.defaultPadding,
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.9),
-          borderRadius: BorderRadius.circular(borderRadius ?? 8.0),
+          borderRadius: BorderRadius.circular(borderRadius ?? AppConstants.radius8r),
         ),
       ),
     );

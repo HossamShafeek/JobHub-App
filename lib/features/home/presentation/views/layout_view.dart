@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:jobhub/config/icons/icons_broken.dart';
-import 'package:jobhub/config/routes/app_routes.dart';
-import 'package:jobhub/core/utils/app_colors.dart';
 import 'package:jobhub/core/utils/app_constants.dart';
 import 'package:jobhub/core/widgets/logo_widget.dart';
 import 'package:jobhub/features/Saved/presentation/cubits/get_saved_cubit/get_saved_cubit.dart';
@@ -12,6 +9,7 @@ import 'package:jobhub/features/home/presentation/cubits/bottom_navigation_cubit
 import 'package:jobhub/features/home/presentation/cubits/bottom_navigation_cubit/bottom_navigation_state.dart';
 import 'package:jobhub/features/home/presentation/cubits/get_recently_jobs_cubit/get_recently_jobs_cubit.dart';
 import 'package:jobhub/features/home/presentation/cubits/get_suggested_job_cubit/get_suggested_job_cubit.dart';
+import 'package:jobhub/features/home/presentation/views/widgets/chat_button.dart';
 import 'package:jobhub/features/profile/presentation/cubits/get_user_profile_cubit/get_user_profile_cubit.dart';
 
 class LayoutView extends StatefulWidget {
@@ -41,20 +39,8 @@ class _LayoutViewState extends State<LayoutView> {
           appBar: AppBar(
             centerTitle: false,
             title: const LogoWidget(),
-            actions: [
-              IconButton(
-                padding: EdgeInsets.symmetric(
-                  horizontal: AppConstants.defaultPadding,
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.chatView);
-                },
-                icon: Icon(
-                  IconBroken.Chat,
-                  color: AppColors.black,
-                  size: AppConstants.iconSize28,
-                ),
-              )
+            actions:const [
+              ChatButton(),
             ],
           ),
           body: BottomNavigationCubit.get(context)

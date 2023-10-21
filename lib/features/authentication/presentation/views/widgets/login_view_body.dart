@@ -34,7 +34,7 @@ class LoginViewBody extends StatelessWidget {
           AppConstants.userId = state.authenticationModel.user!.id.toString();
           AppConstants.token = state.authenticationModel.token!;
           Navigator.pushReplacementNamed(context, Routes.layoutView);
-          showSuccessSnackBar(context: context, message: "success");
+          showSuccessSnackBar(context: context, message: 'Logged in successfully');
         } else if (state is LoginFailureState) {
           showErrorSnackBar(context: context, message: state.error);
         }

@@ -41,6 +41,8 @@ class BioDataStep extends StatelessWidget {
             validator: (value) {
               if (value!.isEmpty) {
                 return 'Please enter your phone';
+              }else if(value.length <11){
+                return 'The phone must consist of 11 numbers';
               }
               return null;
             },

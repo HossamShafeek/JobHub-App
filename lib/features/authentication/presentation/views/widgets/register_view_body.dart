@@ -34,7 +34,7 @@ class RegisterViewBody extends StatelessWidget {
           AppConstants.userId = state.authenticationModel.data!.id.toString();
           AppConstants.token = state.authenticationModel.token!;
           Navigator.pushNamedAndRemoveUntil(context, Routes.layoutView, (route) => false);
-          showSuccessSnackBar(context: context, message: "success");
+          showSuccessSnackBar(context: context, message: 'Logged in successfully');
         } else if (state is RegisterFailureState) {
           showErrorSnackBar(context: context, message: state.error);
         }

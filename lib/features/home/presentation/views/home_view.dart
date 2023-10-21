@@ -14,7 +14,7 @@ class HomeView extends StatelessWidget {
     return SingleChildScrollView(
       padding: EdgeInsets.all(AppConstants.defaultPadding),
       physics: const BouncingScrollPhysics(),
-      child: const Column(
+      child:const  Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           WelcomeMessageWidget(),

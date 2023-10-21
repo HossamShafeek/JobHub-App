@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jobhub/config/icons/icons_broken.dart';
 import 'package:jobhub/config/routes/app_routes.dart';
+import 'package:jobhub/core/shimmer/shimmer_search_button.dart';
 import 'package:jobhub/core/utils/app_colors.dart';
 import 'package:jobhub/core/utils/app_constants.dart';
 import 'package:jobhub/core/utils/app_strings.dart';
@@ -42,7 +43,7 @@ class CustomSearchButton extends StatelessWidget {
                     padding: EdgeInsets.all(AppConstants.padding5h),
                     decoration: BoxDecoration(
                       borderRadius:
-                          BorderRadius.circular(AppConstants.radius5r),
+                      BorderRadius.circular(AppConstants.radius5r),
                       color: Colors.white,
                     ),
                     child: Icon(
@@ -56,9 +57,7 @@ class CustomSearchButton extends StatelessWidget {
             ),
           );
         } else {
-          return SizedBox(
-            height: AppConstants.padding30h,
-          );
+          return const ShimmerSearchButton();
         }
       },
     );

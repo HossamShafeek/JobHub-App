@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jobhub/core/animations/page_fade_transition.dart';
 import 'package:jobhub/core/animations/page_slide_transition.dart';
-import 'package:jobhub/core/api/api_services_implementation.dart';
 import 'package:jobhub/core/utils/app_strings.dart';
+import 'package:jobhub/core/utils/service_locator.dart';
+import 'package:jobhub/features/Saved/data/repository/Saved_repository_implementation.dart';
+import 'package:jobhub/features/Saved/presentation/cubits/remove_saved_cubit/remove_saved_cubit.dart';
 import 'package:jobhub/features/apply/data/repository/apply_repository_implementation.dart';
 import 'package:jobhub/features/apply/presentation/cubits/apply_job_cubit/apply_job_cubit.dart';
 import 'package:jobhub/features/apply/presentation/cubits/get_apply_cubit/get_apply_cubit.dart';
@@ -59,8 +61,7 @@ class AppRoutes {
         return PageFadeTransition(
           page: BlocProvider(
             create: (context) => LoginCubit(
-                AuthenticationRepositoryImplementation(
-                    ApiServicesImplementation())),
+                getIt.get<AuthenticationRepositoryImplementation>()),
             child: const LoginView(),
           ),
         );
@@ -69,8 +70,7 @@ class AppRoutes {
           direction: AxisDirection.left,
           page: BlocProvider(
             create: (context) => RegisterCubit(
-                AuthenticationRepositoryImplementation(
-                    ApiServicesImplementation())),
+                getIt.get<AuthenticationRepositoryImplementation>()),
             child: const RegisterView(),
           ),
         );
@@ -79,7 +79,7 @@ class AppRoutes {
           direction: AxisDirection.left,
           page: BlocProvider(
               create: (context) => SendMessageCubit(
-                  ChatRepositoryImplementation(ApiServicesImplementation())),
+                  getIt.get<ChatRepositoryImplementation>()),
               child: const ChatView()),
         );
       case Routes.jobsView:
@@ -101,11 +101,11 @@ class AppRoutes {
           page: MultiBlocProvider(providers: [
             BlocProvider(
               create: (context) => ApplyJobCubit(
-                  ApplyRepositoryImplementation(ApiServicesImplementation())),
+                  getIt.get<ApplyRepositoryImplementation>()),
             ),
             BlocProvider(
               create: (context) => SendMessageCubit(
-                  ChatRepositoryImplementation(ApiServicesImplementation())),
+                  getIt.get<ChatRepositoryImplementation>()),
             ),
           ], child: ApplyJobView(job: job)),
         );
@@ -118,11 +118,15 @@ class AppRoutes {
             ),
             BlocProvider(
               create: (context) => GetSuggestedJobCubit(
-                  HomeRepositoryImplementation(ApiServicesImplementation())),
+                  getIt.get<HomeRepositoryImplementation>()),
             ),
             BlocProvider(
               create: (context) => GetApplyCubit(
-                  ApplyRepositoryImplementation(ApiServicesImplementation())),
+                  getIt.get<ApplyRepositoryImplementation>()),
+            ),
+            BlocProvider(
+              create: (context) => RemoveFromSavedCubit(
+                  getIt.get<SavedRepositoryImplementation>()),
             ),
           ], child: const LayoutView()),
         );

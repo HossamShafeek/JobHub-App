@@ -27,7 +27,7 @@ class AppStrings {
       'Create a better future for yourself here';
   static const String search = 'Search...';
   static const String suggestedJob = 'Suggested Job';
-  static const String recentlyJob = 'Suggested Job';
+  static const String recentlyJob = 'Recently Job';
   static const String jobs = 'Jobs';
   static const String jobDescription = 'Job Description';
   static const String jobSkills = 'Job Skills';

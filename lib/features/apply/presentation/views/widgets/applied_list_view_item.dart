@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:jobhub/core/utils/app_colors.dart';
 import 'package:jobhub/core/utils/app_constants.dart';
 import 'package:jobhub/core/utils/app_styles.dart';
@@ -33,9 +32,9 @@ class AppliedListViewItem extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    DateFormat('dd/mm/yyyy').format(
-                      apply.createdAt!,
-                    ),
+
+                      apply.createdAt.toString().replaceRange(11,24,''),
+
                     style: AppStyles.textStyle16,
                   ),
                 ],
