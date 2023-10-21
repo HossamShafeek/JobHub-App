@@ -39,11 +39,11 @@ class ApiServicesImplementation implements ApiServices {
       'Authorization': 'Bearer $token',
       'Accept': 'application/json',
     };
-    return await _dio!.post(
-      endPoint,
-      queryParameters: queryParameters,
-      data: data,
-    );
+    return await _dio!.post(endPoint,
+        queryParameters: queryParameters,
+        data: data, onSendProgress: (int send, int total) {
+      print('$send $total');
+    });
   }
 
   @override

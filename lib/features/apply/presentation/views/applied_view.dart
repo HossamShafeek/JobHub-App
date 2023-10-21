@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jobhub/core/shimmer/shimmer_applied_list_view.dart';
 import 'package:jobhub/core/utils/app_assets.dart';
 import 'package:jobhub/core/utils/app_strings.dart';
 import 'package:jobhub/core/widgets/custom_empty_widget.dart';
@@ -31,7 +32,7 @@ class AppliedView extends StatelessWidget {
         } else if (state is GetApplyFailureState) {
           return CustomErrorWidget(error: state.error);
         } else {
-          return const LoadingIndicatorWidget();
+          return const ShimmerAppliedListView();
         }
       },
     );

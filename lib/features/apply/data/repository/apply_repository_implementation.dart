@@ -21,7 +21,7 @@ class ApplyRepositoryImplementation extends ApplyRepository {
     required String email,
     required String phone,
     required String workType,
-    required MultipartFile otherFile,
+    required dynamic  otherFile,
     required String jobId,
     required String userId,
   }) async {
@@ -31,7 +31,7 @@ class ApplyRepositoryImplementation extends ApplyRepository {
         'email': email,
         'mobile': phone,
         'work_type': workType,
-        'other_file': otherFile,
+        'other_file': await otherFile,
         'jobs_id': jobId,
         'user_id': userId
       }, endPoint: EndPoints.apply, token: AppConstants.token);

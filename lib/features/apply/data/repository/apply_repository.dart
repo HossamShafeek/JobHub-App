@@ -12,7 +12,7 @@ abstract class ApplyRepository {
     required String email,
     required String phone,
     required String workType,
-    required MultipartFile otherFile,
+    required dynamic otherFile,
     required String jobId,
     required String userId,
   });
