@@ -7,6 +7,7 @@
 - Dart programming language
 - MVVM Architecture
 - Bloc state management (cubit)
+- Responsive ( Flutter Screenutil Package )
 - Animation
 - Backend (Api)
 - Dio package
